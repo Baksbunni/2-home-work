@@ -27,22 +27,34 @@ public class Task5 {
                 System.out.println("Такого дня нету");
         }
         //Задача1
-        int clientOs = 0;
+        int clientOs = 0; // clientOs, где 0 - Ios, 1 - Android.
         if (clientOs == 0) {
             System.out.println("Вы пользуетесь Ios. Установите версию приложения для Ios по ссылке");
         } else if (clientOs == 1) {
             System.out.println("Вы используете Android. Скачайте версию приложения для Android");
         }
         // Задача 2.
+        // Ios - 0, Android - 1.
+        int clientOs1 = 0;
         int clientDeviceYear = 2015;
-        if (clientDeviceYear < 2015) {
-            System.out.println("Установите облегченую версию приложения Ios" + clientOs + " по ссылке");
+        String operationSystem;
+        if (clientOs1 == 0) {
+            operationSystem = "Ios";
         } else {
-            System.out.println("Установите облегченную версию приложения для Android " + clientOs + " по ссылке");
+            operationSystem = "Android";
         }
+        String message;
+        if (clientDeviceYear < 2015) {
+            message = "Установите облегченую версию для " + operationSystem + " по ссылке";
+        } else {
+            message = "Установите облегченную версию приложения для " + operationSystem + " по ссылке";
+        }
+        System.out.println(message);
+
+
         //Задача 3.
         int year = 2021;
-        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        if ((year < 1584 && year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не являеться високосным");
@@ -60,10 +72,13 @@ public class Task5 {
             System.out.println("Доставка в пределах " + deliveryDistance + " доставка занимает " + deliveryTime);
         } else if (deliveryDistance > 100)
             System.out.println("Доставки нет");
+        {
+        }
 
         // Задача 5.
-        int monthNumber = 12;
-        String season = null;
+        int monthNumber = 14;
+        String season = new String("не к какому сезону");
+        if (monthNumber < 12) ;
         switch (monthNumber) {
             case 1:
             case 12:
@@ -86,12 +101,15 @@ public class Task5 {
                 season = " осень ";
                 break;
             default:
-                System.out.println("Неверный номер месяца.");
+                System.out.printf(" Неверный номер месяца " + monthNumber);
         }
         System.out.println(" Месяц номер " + monthNumber + " принадлежит к сезону " + season);
-
-        }
     }
+}
+
+
+
+
 
 
 
