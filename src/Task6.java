@@ -43,7 +43,9 @@ public class Task6 {
             System.out.println(o);
         }
         // Задача 4.
-
+        for (int f = 10; f >= -10; f--) {
+            System.out.println(f);
+        }
         // Задача 5.
         int leapYear;
         for (int z = 1904; z <= 2096; z = z + 4) {
