@@ -79,9 +79,9 @@ public class Main {
 
         var frog = 3.5;
         System.out.println(frog);
-        var frogs = 3.5 * 10;
-        System.out.println(frogs);
-        frog = frogs / 3.5;
+           frog *= 10;
+        System.out.println(frog);
+        frog /= 3.5;
         System.out.println(frog);
         (frog) = frog + 4;
         System.out.println((frog));
@@ -101,7 +101,7 @@ public class Main {
 
         secondBoxer = 82.7;
         firstBoxer = 78.2;
-        var ReSult = (secondBoxer / firstBoxer);
+        var ReSult = (secondBoxer % firstBoxer);
         System.out.println(ReSult);
 
         var openingHours = 640;
